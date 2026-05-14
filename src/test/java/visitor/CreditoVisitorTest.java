@@ -22,4 +22,13 @@ class CreditoVisitorTest {
 
         assertEquals("Cliente Premium: Ana | Limite Aprovado: R$ 17000.0", visitor.avaliar(cliente));
     }
+
+    @Test
+    void deveCalcularCreditoClienteEmpresarial() {
+        ClienteEmpresarial cliente = new ClienteEmpresarial("Tech Solutions Ltda", 500000.0f);
+        CreditoVisitor visitor = new CreditoVisitor();
+
+
+        assertEquals("Cliente Empresarial: Tech Solutions Ltda | Limite Aprovado: R$ 50000.0", visitor.avaliar(cliente));
+    }
 }
