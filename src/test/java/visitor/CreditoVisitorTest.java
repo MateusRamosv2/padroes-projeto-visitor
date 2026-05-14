@@ -13,4 +13,13 @@ class CreditoVisitorTest {
 
         assertEquals("Cliente Comum: Mateus | Limite Aprovado: R$ 3000.0", visitor.avaliar(cliente));
     }
+
+    @Test
+    void deveCalcularCreditoClientePremium() {
+        ClientePremium cliente = new ClientePremium("Ana", 5000.0f, 10000.0f);
+        CreditoVisitor visitor = new CreditoVisitor();
+
+
+        assertEquals("Cliente Premium: Ana | Limite Aprovado: R$ 17000.0", visitor.avaliar(cliente));
+    }
 }
