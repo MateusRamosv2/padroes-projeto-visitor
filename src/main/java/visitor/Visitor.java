@@ -1,4 +1,4 @@
-package padroescomportamentais.visitor;
+package visitor;
 
 public interface Visitor {
     String calcularCreditoComum(ClienteComum cliente);
